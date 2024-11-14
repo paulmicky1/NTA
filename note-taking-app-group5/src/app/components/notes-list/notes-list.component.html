@@ -1,0 +1,8 @@
+<h2>Notes</h2>
+<ul>
+  <li *ngFor="let note of notes">
+    <h3>{{ note.title }}</h3>
+    <p>{{ note.content }}</p>
+    <small>{{ note.createdAt | date }}</small>
+  </li>
+</ul>
