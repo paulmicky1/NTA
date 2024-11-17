@@ -1,14 +1,16 @@
+<section>
+  <header>
+    <app-header></app-header>
+  </header>
 
-<div class="container">
-  <h1>Markdown Note App</h1>
-  <form (ngSubmit)="addNote()">
-    <textarea [(ngModel)]="newNoteContent" placeholder="Write your note in Markdown..." rows="5"></textarea>
-    <button type="submit">Add Note</button>
-  </form>
-  <div class="notes">
-    <div *ngFor="let note of notes" class="note">
-      <div [innerHTML]="parseMarkdown(note.content)"></div>
-      <button (click)="deleteNote(note.id)">Delete</button>
-    </div>
-  </div>
-</div>
+  <main>
+    <!-- Dynamic content -->
+    <router-outlet /> 
+  </main>
+  
+  <footer>
+    <!-- <app-footer></app-footer> -->
+  </footer>
+</section>
+
+
