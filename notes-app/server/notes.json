@@ -5,21 +5,6 @@
     "content": "This is a comprehensive note taking app usign node js"
   },
   {
-    "id": "1731854008687",
-    "title": "a",
-    "content": "a"
-  },
-  {
-    "id": "1731856190918",
-    "title": "b",
-    "content": "b"
-  },
-  {
-    "id": "1731857170759",
-    "title": "a",
-    "content": "gh"
-  },
-  {
     "id": "1731857333564",
     "title": "bus timing",
     "content": "sunday 9am"
@@ -28,5 +13,15 @@
     "id": "1731857597917",
     "title": "appointment",
     "content": "9am\nIBA"
+  },
+  {
+    "id": "1731862117096",
+    "title": "biplab ",
+    "content": "biplab is my friend"
+  },
+  {
+    "id": "1731862695021",
+    "title": "Apple",
+    "content": "Apple a day keeps the doctor away"
   }
 ]
