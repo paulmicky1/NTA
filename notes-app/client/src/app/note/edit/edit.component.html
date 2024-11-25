@@ -1,0 +1,44 @@
+<div class="container mx-auto p-6 max-w-lg">
+  <h2 class="text-2xl font-semibold mb-4 text-center">Edit Note</h2>
+
+  <form [formGroup]="editNoteForm" (ngSubmit)="onSubmit()" class="bg-white shadow-md rounded-lg p-6">
+    <!-- Title Field -->
+    <div class="mb-4">
+      <label for="title" class="block text-sm font-medium text-gray-700">Title</label>
+      <input
+        id="title"
+        type="text"
+        formControlName="title"
+        placeholder="Enter note title"
+        class="mt-1 block w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+      />
+      <small *ngIf="editNoteForm.get('title')?.invalid && editNoteForm.get('title')?.touched" class="text-red-500">
+        Title is required.
+      </small>
+    </div>
+
+    <!-- Content Field -->
+    <div class="mb-4">
+      <label for="content" class="block text-sm font-medium text-gray-700">Content</label>
+      <textarea
+        id="content"
+        formControlName="content"
+        placeholder="Enter note content"
+        rows="4"
+        class="mt-1 block w-full border border-gray-300 rounded-lg p-3 focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+      ></textarea>
+      <small *ngIf="editNoteForm.get('content')?.invalid && editNoteForm.get('content')?.touched" class="text-red-500">
+        Content is required.
+      </small>
+    </div>
+
+    <!-- Submit Button -->
+    <button
+      type="submit"
+      [disabled]="editNoteForm.invalid"
+      class="w-full bg-blue-500 text-white font-semibold py-2 px-4 rounded-lg hover:bg-blue-600 transition duration-300 disabled:bg-gray-300 disabled:cursor-not-allowed"
+    >
+      Save Changes
+    </button>
+  </form>
+</div>
